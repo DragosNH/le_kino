@@ -1,0 +1,45 @@
+.infoContainer{
+    display: flex;
+}
+
+.image{
+    width: 300px;
+    margin: 80px 200px 80px 300px;
+}
+
+.infosFilm{
+    margin: 80px 200px 0 0;
+}
+
+h1{
+    color: #E30613;
+    margin-bottom: 10px;
+}
+
+h2{
+    color: #E30613;
+    margin-bottom: 10px;
+}
+
+p{
+    margin-bottom: 10px; 
+}
+
+.iframe{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 80px;
+}
+
+@media (max-width : 800px) {
+    .infoContainer{
+        flex-wrap: wrap;
+    }
+
+    .infosFilm{
+        display: flex;
+        flex-direction: column;
+        
+    }
+}

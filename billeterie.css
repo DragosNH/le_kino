@@ -1,0 +1,38 @@
+.ticketsContainer{
+    background-color: #474747;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 80px 400px;
+}
+
+h2{
+    color: #E30613;
+    margin-bottom: 20px;
+}
+
+.robot{
+    width: 350px;
+}
+
+.cinema{
+    width: 400px;
+    margin: 20px 30px 20px 0;
+}
+
+.infoSalles{
+    margin-left: 50px;
+}
+
+@media (max-width : 800px) {/*Tablet*/
+
+    .ticketsContainer{
+        margin: 0;
+        flex-direction: column;
+    }
+
+    .infoSalles{
+        margin: 0;
+    }
+
+}

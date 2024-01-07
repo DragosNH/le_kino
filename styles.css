@@ -1,0 +1,391 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Futura-Medium', sans-serif;
+}
+
+body {
+  font-family: 'Futura-Medium', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  color: #fff;
+}
+
+/* *************** Header ****************** */
+header {
+  background-color: #181818;
+  color: #fff;
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cover{
+  max-width: 1200px;
+  min-width: 600px;
+}
+
+.icons{
+  display: flex;
+  justify-content:flex-end;
+  position: absolute;
+  right: 530px;
+  z-index: 10;
+}
+
+.icon{
+  width: 35px;
+  border-radius: 5px;
+  margin-left: 5px;
+}
+
+.cover-image {
+  background-image: url(Images/Couverture\ page.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  width: 100vw;
+  height: 10vw;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+#logo {
+  width: 70px;
+  height: auto;
+  padding: 0;
+  margin-right: 50px;
+}
+
+nav {
+  display: flex;
+}
+
+nav a {
+  background-color: black;
+  color: #E30613;
+  text-decoration: none;
+  margin-left: 20px;
+  border: 1px solid #E30613;
+  padding: 10px 25px;
+}
+
+nav a:hover{
+  color: #000;
+  border: 1px solid #000;
+  background-color: #E30613;
+}
+
+nav a.active {
+  color: #000;
+  border: 1px solid #000;
+  background-color: #E30613;
+}
+
+nav img {
+  border: none;
+  background-color: none;
+}
+
+#menu-icon {
+  display: none;
+
+}
+
+/* ********************** main ***************************** */
+/* ***************** Cinema cards ************************** */
+.wrapper {
+  width: 100%;
+  display: flex;
+  padding: 80px 0;
+  justify-content: center;
+}
+
+.container {
+  height: 600px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: start;
+}
+
+.card {
+  width: 80px;
+  border-radius: 0.75rem;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  overflow: hidden;
+  margin: 0 10px;
+  display: flex;
+  align-items: flex-end;
+  transition: 0.6s cubic-bezier(0.28, -0.03, 0, 0.99);
+  box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.8);
+}
+
+.card > .row {
+  color: white;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.card > .row > .icon {
+  background: #223;
+  color: white;
+  border-radius: 50%;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px;
+}
+
+.card > .row > .description {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+  height: 80px;
+  width: 520px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition-delay: 0.3s;
+  transition: all 0.3s ease;
+}
+
+.description p {
+  color: #b0b0ba;
+  padding-top: 5px;
+}
+
+.description h4 {
+  text-transform: uppercase;
+}
+
+input {
+  display: none;
+}
+
+input:checked + label {
+  width: 1000px;
+}
+
+input:checked + label .description {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+.card[for=c1] {
+  background-image: url("Images/image1.jpg");
+}
+
+.card[for=c2] {
+  background-image: url("Images/image2.jpg");
+}
+
+.card[for=c3] {
+  background-image: url("Images/image3.jpeg");
+}
+
+/* *************** Affiches ******************* */
+.postersContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #fff;
+  margin: 0 auto; 
+  max-width: 1200px;
+  border-radius: 24px;
+}
+
+.texteFilms {
+  background-color: #E30613;
+  text-align: center;
+  width: 100%;
+  border-radius: 24px;
+}
+
+.affiches {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.affiches .affiche {
+  width: 235px;
+  height: 300px;
+  padding: 10px;
+  position: relative;
+}
+
+.afficheMenu {
+  position: relative;
+}
+
+.afficheMenu .affiche:hover {
+  filter: brightness(70%) saturate(100%) hue-rotate(0deg) contrast(80%);
+}
+
+.afficheMenu .boutonAffiche {
+opacity: 0;
+visibility: hidden;
+position:relative;
+top: -50%;
+left: 50%;
+transform: translate(-50%, -50%);
+z-index: 1; 
+display: flex;
+flex-direction: column; 
+align-items: center; 
+transition: opacity 0.3s ease-in-out;
+margin: 0; 
+}
+
+
+.afficheMenu:hover .boutonAffiche {
+opacity: 1;
+visibility: visible;
+margin: 10px;
+padding: 5px;
+}
+
+.boutonAffiche:hover{
+background-color: #840000;
+}
+
+button{
+background-color: #E30613;
+color: #fff;
+width: 120px;
+border: 2px solid #840000;
+border-radius: 5px;
+margin-bottom: 10px;
+}
+
+a{
+  text-decoration: none;
+  color: #fff;
+}
+
+/* ********************* footer ******************* */
+footer {
+  background-color: #181818;
+  margin-top: 80px;
+}
+
+.footerContainer {
+  display: flex;
+  justify-content: space-between;
+  margin: 0  10vw;
+  align-items: center;
+}
+
+.coordonates{
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  margin-right: 20px;
+}
+
+.tarifs{
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  margin-right: 20px;
+  flex-wrap: wrap;
+}
+
+
+.annonceur{
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  width: 60px;
+}
+
+
+
+@media (max-width: 1200px){/*Leptop*/
+  .container{
+    height: 500px;
+    width: 800px;
+  }
+}
+
+@media (max-width : 800px) {/*Tablet*/
+
+  .affiches{
+    display: block;
+  }
+
+  .afficheMenu .boutonAffiche{
+    opacity: 1;
+    visibility: inherit;
+    top:0;
+    margin: 10px;
+    padding: 5px;
+  }
+
+  .container{
+    height: 300px;
+    width: 600px;
+  }
+
+  .footerContainer{
+      display: block;
+    }
+
+    .annonceur{
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    .tarifs{
+      width: 100%;
+      margin-top: 20px;
+    }
+    
+}
+
+
+@media (max-width: 550px){/*Phone*/
+  
+  .cover{
+    display: none;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* Adjust the top position as needed */
+    left: 0;
+    background-color: #333;
+    width: 100%;
+    text-align: center;
+}
+
+nav a {
+    margin: 0; /* Remove margin between links */
+    padding: 10px; /* Add padding to links for better touch interaction */
+    display: block;
+}
+
+header {
+    position: relative;
+}
+
+#menu-icon {
+    display: block;
+    cursor: pointer;
+}
+  
+  
+  .container{
+    display: none;
+  }
+}

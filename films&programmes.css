@@ -1,0 +1,81 @@
+.movieContainer{
+    background-color: #fff;
+    margin: 80px auto;
+    max-width: 1200px;
+    display: flex;
+    color: black;
+    flex-wrap: nowrap;
+}
+
+.titlePoster{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 25px 0 25px 25px;
+}
+
+h3{
+    color: #E30613;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+img{
+    width: 250px;
+}
+
+.genreRealise{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    flex-shrink: 1;
+    padding: 0 100px;
+}
+
+.enligne{
+    background-color: #000;
+    color: #E30613;
+    border: 1px solid #E30613;
+    width: 345px;
+    height: 65px; 
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-shrink: 0;
+    font-size: 18px;
+}
+
+.programme{
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    margin: 30px;
+    justify-content: space-around;
+}
+
+.enligne img{
+width: 50px;
+}
+
+.enligne a{
+    text-decoration: none;
+    color: #E30613;
+}
+
+.enligne:hover{
+    background-color: #333333;
+    color: #000;
+    border: 1px solid #000;
+}
+
+
+@media (max-width : 800px) {/*Tablet*/
+
+    .movieContainer{
+        display: block;
+    }
+
+}
