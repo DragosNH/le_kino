@@ -362,7 +362,7 @@ footer {
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 60px; /* Adjust the top position as needed */
+    top: 60px; 
     left: 0;
     background-color: #333;
     width: 100%;
@@ -370,8 +370,8 @@ footer {
 }
 
 nav a {
-    margin: 0; /* Remove margin between links */
-    padding: 10px; /* Add padding to links for better touch interaction */
+    margin: 0; 
+    padding: 10px; 
     display: block;
 }
 
@@ -382,6 +382,8 @@ header {
 #menu-icon {
     display: block;
     cursor: pointer;
+    position: relative;
+    right: -100px;
 }
   
   
